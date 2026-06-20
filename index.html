@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split The Bill Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>💰 Split The Bill Calculator</h1>
+            <button id="themeToggle">🌙 Dark Mode</button>
+        </header>
+
+        <div class="card">
+
+            <div class="input-group">
+                <label>Total Bill Amount</label>
+                <input type="number" id="billAmount" placeholder="Enter bill amount">
+            </div>
+
+            <div class="input-group">
+                <label>Number of People</label>
+                <input type="number" id="peopleCount" placeholder="Enter number of people">
+            </div>
+
+            <div class="input-group">
+                <label>Tip Percentage</label>
+                <select id="tipPercent">
+                    <option value="0">No Tip</option>
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Custom Tip (%)</label>
+                <input type="number" id="customTip" placeholder="Optional">
+            </div>
+
+            <div class="input-group">
+                <label>GST / Tax (%)</label>
+                <input type="number" id="taxPercent" placeholder="Optional">
+            </div>
+
+            <div class="input-group">
+                <label>Currency</label>
+                <select id="currency">
+                    <option value="₹">₹ INR</option>
+                    <option value="$">$ USD</option>
+                    <option value="€">€ EUR</option>
+                </select>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="roundOff">
+                <label for="roundOff">Round Off Per Person Amount</label>
+            </div>
+
+            <div class="buttons">
+                <button id="calculateBtn">Calculate</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+
+            <p id="error"></p>
+
+        </div>
+
+        <div class="result-card">
+            <h2>Calculation Summary</h2>
+
+            <p>Original Bill: <span id="originalBill">0</span></p>
+            <p>Tip Amount: <span id="tipAmount">0</span></p>
+            <p>Tax Amount: <span id="taxAmount">0</span></p>
+            <p>Total Amount: <span id="totalAmount">0</span></p>
+            <p>Per Person: <span id="perPerson">0</span></p>
+
+            <div class="result-buttons">
+                <button id="copyBtn">Copy Result</button>
+                <button id="downloadBtn">Download Receipt</button>
+                <button id="shareBtn">Share WhatsApp</button>
+            </div>
+        </div>
+
+        <div class="history-card">
+            <h2>Expense History</h2>
+            <ul id="historyList"></ul>
+        </div>
+
+        <div class="digital-heroes">
+            <a href="https://digitalheroesco.com"
+               target="_blank">
+                Built for Digital Heroes
+            </a>
+        </div>
+
+        <footer>
+            <p>Developed by Abhinav Kumar Jaiswal</p>
+            <p>Email: abhinavusictit@gmail.com</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
